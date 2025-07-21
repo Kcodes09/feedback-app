@@ -5,11 +5,12 @@ const path = require('path');
 const app = express();
 const PORT = process.env.port||5000;
 
-const DATA_FILE = path.join('/tmp', 'feedbacks.json');
+const DATA_FILE = path.join(__dirname, 'feedbacks.json');
 
 app.use(cors());
 app.use(express.json());
-
+fs.writeFileSync(DATA_FILE, '[]'); // initialize empty array
+  console.log('Created feedbacks.json at:', DATA_FILE);
 // GET all feedbacks
 app.get('/api/feedbacks', (req, res) => {
   fs.readFile(DATA_FILE, 'utf-8', (err, data) => {
