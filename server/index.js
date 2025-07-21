@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 const PORT = 5000;
 
-const DATA_FILE = path.join(__dirname, 'feedbacks.json');
+const DATA_FILE = path.join('/tmp', 'feedbacks.json');
 
 app.use(cors());
 app.use(express.json());
