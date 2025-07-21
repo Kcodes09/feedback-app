@@ -7,7 +7,7 @@ export default function Home() {
   const [currentfeed, setCurrentfeed] = useState("");
   const [error, setError] = useState("");
 
-  const API_URL = 'http://localhost:5000';
+  const API_URL = 'https://feedback-app-glh8.onrender.com';
 
   useEffect(() => {
     fetch(`${API_URL}/api/feedbacks`)
