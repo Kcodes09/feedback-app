@@ -3,7 +3,7 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const PORT = 5000||proces.env.port;
+const PORT = process.env.port||5000;
 
 const DATA_FILE = path.join('/tmp', 'feedbacks.json');
 
